@@ -4,6 +4,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.PositiveOrZero;
 
 @Entity
 public class Veiculo {
@@ -12,12 +18,24 @@ public class Veiculo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String placa;
+    
+    @NotBlank 
     private String patrimonio;
+    @NotBlank
     private String marca;
+    @NotBlank
     private String modelo;
+    @Positive 
+    @NotNull 
+    @Min(1900)
+    @Max(2100)
     private Integer ano;
+    @NotBlank 
     private String categoria;
+    @PositiveOrZero
+    @NotNull 
     private Double kmHorimetro;
+    @NotBlank
     private String tipoCombustivel;
     private String status;
     

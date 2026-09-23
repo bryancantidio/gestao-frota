@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.gestao_frota.model.Veiculo;
 import br.com.gestao_frota.service.VeiculoService;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/veiculos")
@@ -29,7 +30,7 @@ public class VeiculoController {
     }
 
     @PostMapping
-    public Veiculo salvar(@RequestBody Veiculo veiculo){
+    public Veiculo salvar(@Valid @RequestBody Veiculo veiculo){
         return veiculoService.salvar(veiculo);
     }
 
@@ -39,7 +40,7 @@ public class VeiculoController {
     } 
 
     @PutMapping("/{id}")
-    public Veiculo atualizar (@PathVariable Long id, @RequestBody Veiculo veiculo){
+    public Veiculo atualizar (@PathVariable Long id,@Valid @RequestBody Veiculo veiculo){
         return veiculoService.atualizar(id, veiculo);
     } 
 

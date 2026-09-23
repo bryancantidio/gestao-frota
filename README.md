@@ -40,7 +40,7 @@ Service
     ↓
 Repository
     ↓
-PostgreSQL
+MySQL
 ```
 
 ### Camadas
@@ -143,6 +143,18 @@ Dados:
 * Próxima manutenção
 * Observações
 
+## Validações:
+
+* Patrimônio: obrigatório
+* Marca: obrigatória
+* Modelo: obrigatório
+* Ano: obrigatório, entre 1900 e 2100
+* Categoria: obrigatória
+* KM / horímetro: obrigatório, maior ou igual a 0
+* Tipo de combustível: obrigatório
+* Placa: opcional
+* Status: opcional
+
 ## Dashboard
 
 * Total de veículos
@@ -196,7 +208,7 @@ Utilizar o projeto para praticar:
 * Spring Boot
 * Controller / Service / Repository
 * JPA / Hibernate
-* PostgreSQL
+* MySQL
 * Modelagem de banco
 * Relacionamentos
 * HTTP / JSON
