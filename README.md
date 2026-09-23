@@ -109,6 +109,7 @@ Dados:
 
 * Veículo
 * Data
+* Horário
 * Litros
 * Valor total
 * Preço por litro
@@ -118,6 +119,7 @@ Dados:
 
 Cálculos:
 
+* Preço por litro
 * Consumo médio
 * Gasto por veículo
 * Gasto por período
