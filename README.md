@@ -11,7 +11,7 @@
 
 ### Banco de dados
 
-* PostgreSQL
+* MySQL
 
 ### Frontend
 

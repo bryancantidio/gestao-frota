@@ -30,11 +30,7 @@ public class VeiculoService {
     }
 
     public Veiculo atualizar(Long id, Veiculo dados) {
-        Veiculo veiculo = veiculoRepository.findById(id).orElse(null);
-
-        if (veiculo == null) {
-            return null;
-        }
+        Veiculo veiculo = veiculoRepository.findById(id).orElseThrow( () -> new VeiculoNaoEncontradoException("Veiculo não encontrado"));
 
         veiculo.setPlaca(dados.getPlaca());
         veiculo.setPatrimonio(dados.getPatrimonio());
