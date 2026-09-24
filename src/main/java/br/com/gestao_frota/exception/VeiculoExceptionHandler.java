@@ -18,6 +18,12 @@ public class VeiculoExceptionHandler {
         return e.getMessage();
     }
 
+    @ExceptionHandler(AbastecimentoNaoEncontradoException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public String tratarAbastecimentoNaoEncontrado(AbastecimentoNaoEncontradoException e){
+        return e.getMessage();
+    }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public Map<String, String> tratarErrosValidacao(MethodArgumentNotValidException e) {
