@@ -97,6 +97,18 @@ Dados:
 * Tipo de combustível
 * Status
 
+Validações:
+
+* Patrimônio: obrigatório
+* Marca: obrigatória
+* Modelo: obrigatório
+* Ano: obrigatório, entre 1900 e 2100
+* Categoria: obrigatória
+* KM / horímetro: obrigatório, maior ou igual a 0
+* Tipo de combustível: obrigatório
+* Placa: opcional
+* Status: opcional
+
 ## Abastecimentos
 
 * Registrar abastecimento
@@ -145,17 +157,17 @@ Dados:
 * Próxima manutenção
 * Observações
 
-## Validações:
+Validações:
 
-* Patrimônio: obrigatório
-* Marca: obrigatória
-* Modelo: obrigatório
-* Ano: obrigatório, entre 1900 e 2100
-* Categoria: obrigatória
+* Veículo: obrigatório
+* Tipo: obrigatório
+* Data: obrigatória
+* Serviço: obrigatório
+* Custo: obrigatório, maior que 0
 * KM / horímetro: obrigatório, maior ou igual a 0
-* Tipo de combustível: obrigatório
-* Placa: opcional
-* Status: opcional
+* Oficina: obrigatória
+* Próxima manutenção: opcional
+* Observações: opcional
 
 ## Dashboard
 
